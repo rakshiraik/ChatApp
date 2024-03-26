@@ -3972,6 +3972,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "ChatBot.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ChatBot.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ChatBot.Common.dll": {}
+        }
       }
     }
   },
@@ -11592,10 +11602,16 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "ChatBot.Common/1.0.0": {
+      "type": "project",
+      "path": "../ChatBot.Common/ChatBot.Common.csproj",
+      "msbuildProject": "../ChatBot.Common/ChatBot.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "ChatBot.Common >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.28",
       "Microsoft.AspNetCore.Identity.UI >= 6.0.28",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.28",
@@ -11637,7 +11653,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\MechineTest\\ChatBot\\ChatBot.Common\\ChatBot.Common.csproj": {
+              "projectPath": "D:\\MechineTest\\ChatBot\\ChatBot.Common\\ChatBot.Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

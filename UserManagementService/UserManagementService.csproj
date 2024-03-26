@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\ChatBot.Common\ChatBot.Common.csproj" />
   </ItemGroup>
 
 </Project>
