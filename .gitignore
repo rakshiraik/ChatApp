@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/UserManagementService/Migrations/20240328135623_AddFirstNameToAspNetUsers.cs
+/UserManagementService/Migrations/20240328135623_AddFirstNameToAspNetUsers.Designer.cs
