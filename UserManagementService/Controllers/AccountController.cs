@@ -1,4 +1,5 @@
 ﻿using ChatBot.Common.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -21,7 +22,7 @@ namespace UserManagementService.Controllers
             _errorService = errorService;
         }
 
-
+        [AllowAnonymous]
         [HttpPost("RegisterUser")]
         public async Task<IActionResult> RegisterUser(RegisterViewModel model)
         {
@@ -38,7 +39,33 @@ namespace UserManagementService.Controllers
             }           
         }
 
-  
+     
+        [HttpPost("LoginUser")]
+        public async Task<IActionResult> LoginUser(RegisterViewModel model)
+        {
+            UserResultViewModel userResultViewModel = new UserResultViewModel();
+            string result = await _userService.LoginUserAsync(model.Email, model.Password);
+            if (!string.IsNullOrEmpty(result))
+            {
+                userResultViewModel = JsonConvert.DeserializeObject<UserResultViewModel>(result)!;
+                return Ok(userResultViewModel);
+            }
+            else
+            {
+                return BadRequest(this._errorService.ErrorContainer);
+            }
+        }
+
+
+        [Authorize]
+        //[AllowAnonymous]
+        [HttpGet("GetUser")]
+        public async Task<IActionResult> GetUser(int id)
+        {
+            return Ok();
+        }
+
+
 
     }
 }

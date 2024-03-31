@@ -1,4 +1,6 @@
-﻿using System.Configuration;
+﻿using Microsoft.AspNetCore.Authentication;
+using System.Configuration;
+using UserManagementService.Services.Auth;
 using UserManagementService.Services.Error;
 using UserManagementService.Services.User;
 
@@ -10,6 +12,7 @@ namespace UserManagementService.Infrastructure
         {
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IErrorService, ErrorService>();
+            services.AddScoped<IAuthService, AuthService>(); 
         }
     }
 }
