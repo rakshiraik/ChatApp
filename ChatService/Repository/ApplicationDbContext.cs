@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using ChatService.Entity.Tenant.Entities;
-using System;
-using System.Collections.Generic;
-
 
 namespace ChatService.Repository
 {
@@ -38,8 +35,6 @@ namespace ChatService.Repository
 
             modelBuilder.Entity<Room>(entity =>
             {
-                entity.HasNoKey();
-
                 entity.ToTable("Room");
 
                 entity.Property(e => e.CreatedOn).HasColumnType("datetime");
@@ -53,7 +48,7 @@ namespace ChatService.Repository
             {
                 entity.ToTable("RoomUser");
 
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.Property(e => e.UserId).HasMaxLength(450);
             });
 
             OnModelCreatingPartial(modelBuilder);

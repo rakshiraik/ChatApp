@@ -1,0 +1,11 @@
+D:\MechineTest\ChatBot\ChatBot.Common\bin\Debug\net6.0\ChatBot.Common.deps.json
+D:\MechineTest\ChatBot\ChatBot.Common\bin\Debug\net6.0\ChatBot.Common.dll
+D:\MechineTest\ChatBot\ChatBot.Common\bin\Debug\net6.0\ChatBot.Common.pdb
+D:\MechineTest\ChatBot\ChatBot.Common\obj\Debug\net6.0\ChatBot.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\MechineTest\ChatBot\ChatBot.Common\obj\Debug\net6.0\ChatBot.Common.AssemblyInfoInputs.cache
+D:\MechineTest\ChatBot\ChatBot.Common\obj\Debug\net6.0\ChatBot.Common.AssemblyInfo.cs
+D:\MechineTest\ChatBot\ChatBot.Common\obj\Debug\net6.0\ChatBot.Common.csproj.CoreCompileInputs.cache
+D:\MechineTest\ChatBot\ChatBot.Common\obj\Debug\net6.0\ChatBot.Common.dll
+D:\MechineTest\ChatBot\ChatBot.Common\obj\Debug\net6.0\refint\ChatBot.Common.dll
+D:\MechineTest\ChatBot\ChatBot.Common\obj\Debug\net6.0\ChatBot.Common.pdb
+D:\MechineTest\ChatBot\ChatBot.Common\obj\Debug\net6.0\ref\ChatBot.Common.dll
