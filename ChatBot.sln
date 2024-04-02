@@ -3,13 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManagementService", "UserManagementService\UserManagementService.csproj", "{62EF274C-F51B-4F4B-9EB1-FFD70B7E489F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserManagementService", "UserManagementService\UserManagementService.csproj", "{62EF274C-F51B-4F4B-9EB1-FFD70B7E489F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatService", "ChatService\ChatService.csproj", "{961773DC-537F-4610-B41A-A53FBF5C1301}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatService", "ChatService\ChatService.csproj", "{961773DC-537F-4610-B41A-A53FBF5C1301}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagingService", "MessagingService\MessagingService.csproj", "{06C81C3F-9D3B-4497-82B2-6B830AF0F427}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessagingService", "MessagingService\MessagingService.csproj", "{06C81C3F-9D3B-4497-82B2-6B830AF0F427}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatBot.Common", "ChatBot.Common\ChatBot.Common.csproj", "{B3C05809-D7E8-4308-8AB2-F6E45A08F8FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatBot.Common", "ChatBot.Common\ChatBot.Common.csproj", "{B3C05809-D7E8-4308-8AB2-F6E45A08F8FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{C693A339-1542-4410-941B-1A2C060FC5A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chat", "Chat", "{ED9380FF-12CE-4570-8192-EACAB1265955}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Messaging", "Messaging", "{C7D783F6-9180-488C-9329-CED8AF97AE6F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserManagement", "UserManagement", "{CB996833-159D-46F9-A34C-95BD55CAD10A}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ChatService.Db", "ChatService.Db\ChatService.Db.sqlproj", "{F3DA9429-8396-4DD6-8617-FCB4871EE50C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +43,22 @@ Global
 		{B3C05809-D7E8-4308-8AB2-F6E45A08F8FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3C05809-D7E8-4308-8AB2-F6E45A08F8FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3C05809-D7E8-4308-8AB2-F6E45A08F8FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3DA9429-8396-4DD6-8617-FCB4871EE50C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3DA9429-8396-4DD6-8617-FCB4871EE50C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3DA9429-8396-4DD6-8617-FCB4871EE50C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F3DA9429-8396-4DD6-8617-FCB4871EE50C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3DA9429-8396-4DD6-8617-FCB4871EE50C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3DA9429-8396-4DD6-8617-FCB4871EE50C}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{62EF274C-F51B-4F4B-9EB1-FFD70B7E489F} = {CB996833-159D-46F9-A34C-95BD55CAD10A}
+		{961773DC-537F-4610-B41A-A53FBF5C1301} = {ED9380FF-12CE-4570-8192-EACAB1265955}
+		{06C81C3F-9D3B-4497-82B2-6B830AF0F427} = {C7D783F6-9180-488C-9329-CED8AF97AE6F}
+		{B3C05809-D7E8-4308-8AB2-F6E45A08F8FA} = {C693A339-1542-4410-941B-1A2C060FC5A9}
+		{F3DA9429-8396-4DD6-8617-FCB4871EE50C} = {ED9380FF-12CE-4570-8192-EACAB1265955}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ECFE46BB-4683-4AF5-90D7-C1786373A24F}

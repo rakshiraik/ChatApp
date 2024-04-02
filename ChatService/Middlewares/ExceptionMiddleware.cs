@@ -18,9 +18,7 @@ namespace ChatService.Middlewares
         {
             try
             {
-
                 await _next(httpContext);
-
             }
             catch (Exception ex)
             {

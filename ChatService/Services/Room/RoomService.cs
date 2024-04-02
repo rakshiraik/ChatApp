@@ -17,9 +17,6 @@ namespace ChatService.Services.Room
         public Task<List<RoomViewModel>> GetRoomsAsync(string Email)
         {
             List<RoomViewModel> list = new List<RoomViewModel>();
-
-
-
             return Task.FromResult(list);
         }
     }

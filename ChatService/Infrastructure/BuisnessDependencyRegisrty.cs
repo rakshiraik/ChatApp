@@ -14,11 +14,7 @@ namespace ChatService.Infrastructure
 
         public static void RegisterDependency(this IServiceCollection services)
         {
-            //var config = new ConfigurationBuilder()
-            //.AddJsonFile("appsettings.json") // dir: path to the configuration file
-            //.Build();
-            //var conStr = config.GetConnectionString("ChatMessageContextConnection");
-
+            
             services.AddDbContext<ApplicationDbContext>();
             services.AddScoped<IErrorService, ErrorService>();
             services.AddScoped<IRoomUserService, RoomUserService>();

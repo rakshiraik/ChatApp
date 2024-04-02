@@ -10,6 +10,5 @@ namespace ChatService.Services.RoomUser
 
         Task<string> CreateRoomAsync(RoomViewModel roomViewModel);
 
-        //b GetById(string id);
     }
 }

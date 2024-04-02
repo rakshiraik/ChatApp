@@ -11,7 +11,6 @@ namespace ChatService.Repository
         {
 
             this._configuration = configuration;
-
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
