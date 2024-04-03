@@ -1,0 +1,10 @@
+D:\MechineTest\ChatBot\ChatService.Db\bin\Debug\ChatService.Db.dacpac
+D:\MechineTest\ChatBot\ChatService.Db\bin\Debug\ChatService.Db.dll
+D:\MechineTest\ChatBot\ChatService.Db\bin\Debug\ChatService.Db.pdb
+D:\MechineTest\ChatBot\ChatService.Db\obj\Debug\ChatService.Db.sqlproj.AssemblyReference.cache
+D:\MechineTest\ChatBot\ChatService.Db\obj\Debug\Model.xml
+D:\MechineTest\ChatBot\ChatService.Db\obj\Debug\refactor.xml
+D:\MechineTest\ChatBot\ChatService.Db\obj\Debug\postdeploy.sql
+D:\MechineTest\ChatBot\ChatService.Db\obj\Debug\predeploy.sql
+D:\MechineTest\ChatBot\ChatService.Db\obj\Debug\ChatService.Db.dll
+D:\MechineTest\ChatBot\ChatService.Db\obj\Debug\ChatService.Db.pdb

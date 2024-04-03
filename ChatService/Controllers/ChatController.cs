@@ -28,7 +28,9 @@ namespace ChatService.Controllers
    
         }
 
+
         // GET: api/<ChatController>
+        //[AllowAnonymous]
         [HttpGet]
         public IActionResult Get()
         {
