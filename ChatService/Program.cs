@@ -1,3 +1,5 @@
+using ChatBot.Common.Dto;
+using ChatService.ChatHubs;
 using ChatService.Infrastructure;
 using ChatService.Middlewares;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -10,12 +12,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 var key = Encoding.ASCII.GetBytes(builder.Configuration.GetValue<string>("Secret"));
-//var key = Encoding.ASCII.GetBytes("!@#$%^&*()!@#$%^&*()");//Encoding.ASCII.GetBytes(configValue);
+
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-}).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, x => {
+}).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, x =>
+{
     x.Events = new JwtBearerEvents()
     {
         OnAuthenticationFailed = context =>
@@ -44,16 +47,29 @@ builder.Services.AddAuthentication(options =>
 
 });
 
-
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.RegisterDependency();
-var app = builder.Build();
-app.UseCors(builder =>
+
+builder.Services.AddSignalR();
+builder.Services.AddSingleton<IDictionary<string, UserRoomConnection>>(opt =>
+    new Dictionary<string, UserRoomConnection>());
+
+builder.Services.AddCors(options =>
 {
-    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.WithOrigins("http://localhost:4200")
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials();
+    });
 });
+var app = builder.Build();
+app.UseCors();
+app.UseRouting();
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -63,8 +79,13 @@ if (app.Environment.IsDevelopment())
 app.UseExceptionMiddleware();
 app.UseHttpsRedirection();
 
-app.UseAuthentication(); ;
+app.UseAuthentication();
 app.UseAuthorization();
+app.UseEndpoints(endpoint =>
+{
+    endpoint.MapHub<ChatHub>("/chatting");
+    endpoint.MapControllers();
+});
 
 app.MapControllers();
 

@@ -1,4 +1,5 @@
-﻿using ChatService.Repository;
+﻿using ChatBot.Common.Dto;
+using ChatService.Repository;
 using ChatService.Repository.Contracts;
 using ChatService.Services.Error;
 using ChatService.Services.Room;
@@ -20,7 +21,10 @@ namespace ChatService.Infrastructure
             services.AddScoped<IRoomUserService, RoomUserService>();
             services.AddScoped<IRoomService, RoomService>();
             services.AddScoped<IRoomRepository, RoomRepository>();
-            services.AddScoped<IRoomUserRepository, RoomUserRepository>(); 
+            services.AddScoped<IRoomUserRepository, RoomUserRepository>();
+            services.AddSignalR();
+            services.AddSingleton<IDictionary<string, UserRoomConnection>>(opt =>
+                new Dictionary<string, UserRoomConnection>());
 
 
         }
